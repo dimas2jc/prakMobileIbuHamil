@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity3">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:toolbarId="@+id/toolbar">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="222dp"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+            <ImageView
+                android:id="@+id/fotoProfile"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_collapseMode="pin"
+                app:srcCompat="@drawable/player" />
+
+            <ImageView
+                android:id="@+id/notification"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="365dp"
+                app:layout_collapseMode="pin"
+                app:srcCompat="@drawable/notification" />
+
+            <ImageView
+                android:id="@+id/newPasien"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="95dp"
+                android:layout_marginTop="135dp"
+                app:layout_collapseMode="pin"
+                app:srcCompat="@drawable/newpasien" />
+
+            <ImageView
+                android:id="@+id/newPemeriksaan"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="235dp"
+                android:layout_marginTop="130dp"
+                app:layout_collapseMode="pin"
+                app:srcCompat="@drawable/newpemeriksaan" />
+
+            <TextView
+                android:id="@+id/namaUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textStyle="normal"
+                android:textSize="10pt"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="100dp"
+                android:text="Syahiba Saufa"
+                app:layout_collapseMode="pin" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="65dp"
+                android:layout_marginLeft="100dp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="12pt"
+                android:text="Relawan"
+                app:layout_collapseMode="pin" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/content_scrolling" />
+
+    <ImageView
+        android:id="@+id/bgCenter"
+        android:layout_width="350dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="250dp"
+        app:layout_anchor="@+id/toolbar_layout"
+        app:layout_anchorGravity="bottom|center"
+        app:srcCompat="@android:drawable/screen_background_light"
+        tools:ignore="MissingConstraints,NotSibling" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#A1A1A1"
+        app:layout_anchor="@+id/include"
+        app:layout_anchorGravity="center|bottom"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/pasien"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="4dp"
+            app:srcCompat="@drawable/pasien" />
+
+        <ImageView
+            android:id="@+id/evaluasi"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="270dp"
+            app:srcCompat="@drawable/evaluasi" />
+
+        <ImageView
+            android:id="@+id/pemeriksaan"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="100dp"
+            app:srcCompat="@drawable/pemeriksaan" />
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="348dp"
+            app:srcCompat="@drawable/profile" />
+
+        <ImageView
+            android:id="@+id/home"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_marginTop="4dp"
+            android:adjustViewBounds="true"
+            android:cropToPadding="false"
+            android:scaleType="fitCenter"
+            app:layout_anchorGravity="center|bottom"
+            app:srcCompat="@drawable/home" />
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
